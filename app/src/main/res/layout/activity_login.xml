@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageUserLogin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_logo" />
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Login"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageUserLogin"
+        app:layout_constraintStart_toStartOf="@+id/imageUserLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imageUserLogin" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLogin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/et_username_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="15"
+                android:hint="Enter your email"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_password_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="15"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/et_username_login"
+                app:layout_constraintStart_toStartOf="@+id/et_username_login"
+                app:layout_constraintTop_toBottomOf="@+id/et_username_login" />
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:ems="15"
+                android:text="Login"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/et_password_login"
+                app:layout_constraintStart_toStartOf="@+id/et_password_login"
+                app:layout_constraintTop_toBottomOf="@+id/et_password_login" />
+
+            <TextView
+                android:id="@+id/tv_quest_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Don't have account?"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_login"
+                app:layout_constraintStart_toStartOf="@+id/button_login"
+                app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:ems="15"
+                android:text="Register"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_login"
+                app:layout_constraintStart_toStartOf="@+id/button_login"
+                app:layout_constraintTop_toBottomOf="@+id/tv_quest_account" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Register"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_username_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="15"
+                android:hint="Enter your name"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_email_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="15"
+                android:hint="Enter your email"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/et_username_register"
+                app:layout_constraintStart_toStartOf="@+id/et_username_register"
+                app:layout_constraintTop_toBottomOf="@id/et_username_register" />
+
+            <EditText
+                android:id="@+id/et_password_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="15"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/et_email_register"
+                app:layout_constraintStart_toStartOf="@+id/et_email_register"
+                app:layout_constraintTop_toBottomOf="@id/et_email_register" />
+
+            <EditText
+                android:id="@+id/et_repassword_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="15"
+                android:hint="ReEnter your password"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/et_password_register"
+                app:layout_constraintStart_toStartOf="@+id/et_password_register"
+                app:layout_constraintTop_toBottomOf="@id/et_password_register" />
+
+            <Button
+                android:id="@+id/button_register_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:ems="15"
+                android:text="Register"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/et_repassword_register"
+                app:layout_constraintStart_toStartOf="@id/et_repassword_register"
+                app:layout_constraintTop_toBottomOf="@id/et_repassword_register" />
+
+            <TextView
+                android:id="@+id/tv_quest_account_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Already registered?"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/button_register_reg"
+                app:layout_constraintStart_toStartOf="@id/button_register_reg"
+                app:layout_constraintTop_toBottomOf="@id/button_register_reg" />
+
+            <Button
+                android:id="@+id/button_login_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:ems="15"
+                android:text="Login"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/button_register_reg"
+                app:layout_constraintStart_toStartOf="@id/button_register_reg"
+                app:layout_constraintTop_toBottomOf="@id/tv_quest_account_reg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
